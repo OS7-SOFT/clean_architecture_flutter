@@ -3,7 +3,7 @@ import 'package:frontend/cores/errors/failures.dart';
 import 'package:frontend/cores/widgets/error_widget.dart';
 import 'package:frontend/features/Posts/domain/entities/post_entity.dart';
 import 'package:frontend/features/Posts/presentation/providers/post_provider.dart';
-import 'package:frontend/features/Posts/presentation/widgets/Indicator_loading_widget.dart';
+import 'package:frontend/cores/widgets/Indicator_loading_widget.dart';
 import 'package:frontend/features/Posts/presentation/widgets/post_widget.dart';
 import 'package:provider/provider.dart';
 

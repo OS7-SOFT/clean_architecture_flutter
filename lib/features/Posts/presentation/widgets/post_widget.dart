@@ -60,7 +60,7 @@ class PostWidget extends StatelessWidget {
                 IconButton(
                     onPressed: () {
                       ShowDialog().showMessageDialog(
-                          context, deletePost(context, post.id!));
+                          context, () => deletePost(context, post.id!));
                     },
                     icon: const Icon(Icons.delete)),
                 IconButton(

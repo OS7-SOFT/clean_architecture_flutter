@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/Posts/presentation/widgets/Indicator_loading_widget.dart';
+import 'package:frontend/cores/widgets/Indicator_loading_widget.dart';
 
 class ShowDialog {
   Future<dynamic> showLoadingDialog(BuildContext context) {
@@ -20,7 +20,8 @@ class ShowDialog {
         });
   }
 
-  Future<dynamic> showMessageDialog(BuildContext context, void deletePost) {
+  Future<dynamic> showMessageDialog(
+      BuildContext context, Function() deletePost) {
     return showDialog(
         barrierDismissible: true,
         context: context,
@@ -38,7 +39,10 @@ class ShowDialog {
                   style: TextStyle(fontSize: 16),
                 )),
             actions: [
-              buildTextButton("Yes", () => deletePost),
+              buildTextButton("Yes", () {
+                Navigator.pop(context);
+                deletePost();
+              }),
               buildTextButton("No", () {
                 Navigator.pop(context);
               })
@@ -47,9 +51,9 @@ class ShowDialog {
         });
   }
 
-  TextButton buildTextButton(String name, VoidCallback onPressed) {
+  TextButton buildTextButton(String name, Function() onPressed) {
     return TextButton(
-        onPressed: () => onPressed,
+        onPressed: onPressed,
         child: Text(
           name,
           style: const TextStyle(
