@@ -9,7 +9,7 @@ This project demonstrates the implementation of **Clean Architecture** in a Flut
 - **Clean Architecture** principles applied.
 - Organized into **Data**, **Domain**, and **Presentation** layers.
 - Uses **Provider** for efficient state management.
-- Includes examples of **dependency injection**, **error handling**, and **unit testing**.
+- Includes examples of **dependency injection**, **error handling**.
 
 ## Project Structure
 
